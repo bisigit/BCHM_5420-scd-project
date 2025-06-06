@@ -1,6 +1,6 @@
 # Project documentation: Details on how I did what I did.
 
-# I. House-keeping 
+## I. House-keeping 
 1. Create repository
 2. Update README
 3. Clone the repository to my local computer
@@ -31,3 +31,44 @@ git add .
 git commit -m "Initial project structure with folders and placeholder files"
 git push origin main
 ```
+8. Obtained the necessary files for the pipeline with R (see R folder)
+
+## Run Pipeline
+1. Pull pipeline
+
+2. Run the pipeline
+``` 
+nextflow run nf-core/differentialabundance \
+  --study_name "stroke in sickle cell" \
+  --study_type rnaseq \
+  --input pipeline/sdc_samplesheet.tsv \
+  --matrix pipeline/sdc_counts.tsv \
+  --contrasts pipeline/sdc_contrasts.csv \
+  --outdir results \
+  --features pipeline/sdc_annotations.tsv \
+  --features_id_col ensembl_id \
+  --features_name_col gene_name \
+  --gprofiler2_run true \
+  --gprofiler2_organism hsapiens \
+  -r 1.5.0 \
+  -profile conda
+  -with-report report.html \
+  -with-trace trace.txt
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
