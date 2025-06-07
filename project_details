@@ -44,7 +44,7 @@ nextflow run nf-core/differentialabundance \
     --contrasts pipeline/sdc_contrasts.csv \
     --outdir results \
     --features pipeline/sdc_annotations.tsv \
-    --features_id_col ensembl_id \
+    --features_id_col gene_id \
     --features_name_col gene_name \
     --gprofiler2_organism hsapiens \
     -r dev \
