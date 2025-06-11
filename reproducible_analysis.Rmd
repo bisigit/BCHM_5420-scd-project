@@ -1,1 +1,6 @@
 # Reproducibility Testing 
+## Step 0: 
+- Download the count matrix from NCBI
+
+## Step I: R
+- 
