@@ -1,6 +1,20 @@
 # Reproducibility Testing 
+
+
+
+
+
+
+
+
+
 ## Step 0: 
 - Download the count matrix from NCBI
 
 ## Step I: R
-- 
+- Create the following files:
+  1. Formatted count matrix
+  2. Sample sheet
+  3. Contrast sheet
+  4. Annotation sheet
+-Load these files into 
