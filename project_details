@@ -42,7 +42,7 @@ nextflow run nf-core/differentialabundance \
     --input pipeline/sdc_samplesheet.tsv \
     --matrix pipeline/sdc_counts.tsv \
     --contrasts pipeline/sdc_contrasts.csv \
-    --outdir results \
+    --outdir test_results \
     --features pipeline/sdc_annotations.tsv \
     --features_id_col gene_id \
     --features_name_col gene_name \
@@ -53,9 +53,23 @@ nextflow run nf-core/differentialabundance \
     -with-trace trace.txt
 ```
 
-
-
-
+Test Run
+```
+nextflow run nf-core/differentialabundance \
+    --study_name "stroke_in_sickle_cell" \
+    --study_type rnaseq \
+    --input pipeline/sdc_samplesheet.tsv \
+    --matrix pipeline/sdc_counts.tsv \
+    --contrasts pipeline/sdc_contrasts.csv \
+    --outdir test_results \
+    --features pipeline/sdc_annotations.tsv \
+    --features_id_col gene_id \
+    --features_name_col gene_name \
+    -r dev \                        
+    -profile conda \
+    -with-report report.html \
+    -with-trace trace.txt
+```
 
 
 
