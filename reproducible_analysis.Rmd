@@ -1,7 +1,8 @@
-# Reproducibility Testing 
+# Reproducibility Testing for Transcriptomic analysis of circulating endothelial cells in sickle cell anemia (SCA) stroke
 
-
-
+## What is needed to reproduce this step: 
+1. An environment with Nextflow installed. 
+2. Input files 
 
 
 
@@ -17,4 +18,7 @@
   2. Sample sheet
   3. Contrast sheet
   4. Annotation sheet
--Load these files into 
+(Note: I will share the pre-prepared files with you so do not worry about creating them!) 
+-Ensure these files are saved to the directory you will be running your pipeline in.
+-If you are using WSL and your files are in your Windows section. Enter the following command into bash:
+```
