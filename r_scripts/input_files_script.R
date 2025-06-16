@@ -27,9 +27,6 @@ metadata <- data.frame(
   condition = conditions
 )
 
-# 6. Add Sample names
-
-
 
 # 6. Save files
 write_tsv(count_matrixXX, "sdc_counts.tsv")
