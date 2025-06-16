@@ -8,6 +8,5 @@
 *.html
 *.png
 .DS_Store
-results/
 work/
 .nextflow*

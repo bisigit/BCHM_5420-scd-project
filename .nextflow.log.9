@@ -1,0 +1,21 @@
+Jun-06 16:59:08.682 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/differentialabundance -r 2.0.0 --study_name 'stroke in sickle cell' --study_type rnaseq --input pipeline/sdc_samplesheet.tsv --matrix pipeline/sdc_counts.tsv --contrasts pipeline/sdc_contrasts.csv --outdir results --features pipeline/sdc_annotations.tsv --gprofiler2_run true --gprofiler2_organism hsapiens --deseq2 true -profile conda -with-report report.html -with-trace trace.txt
+Jun-06 16:59:08.748 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.3
+Jun-06 16:59:08.770 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/biem/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.0,nf-k8s@1.0.0,nf-tower@1.11.3,nf-wave@1.12.1
+Jun-06 16:59:08.791 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-06 16:59:08.792 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-06 16:59:08.795 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jun-06 16:59:08.805 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-06 16:59:08.815 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/biem/.nextflow/scm
+Jun-06 16:59:09.704 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/biem/.nextflow/assets/nf-core/differentialabundance/.git/config; branch: null; remote: origin; url: https://github.com/nf-core/differentialabundance.git
+Jun-06 16:59:09.735 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Jun-06 16:59:09.744 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/biem/.nextflow/assets/nf-core/differentialabundance/.git/config; branch: null; remote: origin; url: https://github.com/nf-core/differentialabundance.git
+Jun-06 16:59:10.789 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+org.eclipse.jgit.api.errors.RefNotFoundException: Ref 2.0.0 cannot be resolved
+	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:222)
+	at nextflow.scm.AssetManager.checkoutRemoteBranch(AssetManager.groovy:985)
+	at nextflow.scm.AssetManager.checkout(AssetManager.groovy:958)
+	at nextflow.cli.CmdRun.getScriptFile0(CmdRun.groovy:598)
+	at nextflow.cli.CmdRun.getScriptFile(CmdRun.groovy:524)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:326)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)
