@@ -1,0 +1,391 @@
+<!--
+  ~ Copyright 2013-2024, Seqera Labs
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<pre class="mermaid" style="text-align: center;">
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#B6ECE2',
+      'primaryTextColor': '#160F26',
+      'primaryBorderColor': '#065647',
+      'lineColor': '#545555',
+      'clusterBkg': '#BABCBD22',
+      'clusterBorder': '#DDDEDE',
+      'fontFamily': 'arial'
+    }
+  }
+}%%
+flowchart TB
+    subgraph " "
+    v2["Channel.fromList"]
+    v39[" "]
+    v42[" "]
+    v138[" "]
+    v513["Channel.of"]
+    v520["Channel.of"]
+    end
+    subgraph "NFCORE_DIFFERENTIALABUNDANCE [NFCORE_DIFFERENTIALABUNDANCE]"
+    subgraph "NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE [DIFFERENTIALABUNDANCE]"
+    v27(["UNTAR"])
+    v40(["AFFY_JUSTRMA_RAW"])
+    v43(["AFFY_JUSTRMA_NORM"])
+    v71(["PROTEUS"])
+    v97(["GEOQUERY_GETGEO"])
+    v126(["GUNZIP_GTF"])
+    v139(["GTF_TO_TABLE"])
+    v172(["VALIDATOR"])
+    v212(["IMMUNEDECONV"])
+    v221(["CUSTOM_MATRIXFILTER"])
+    subgraph "NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER [ABUNDANCE_DIFFERENTIAL_FILTER]"
+    v256(["LIMMA_NORM"])
+    v266(["LIMMA_DIFFERENTIAL"])
+    v277(["DESEQ2_NORM"])
+    v290(["DESEQ2_DIFFERENTIAL"])
+    v302(["PROPR_PROPD"])
+    v314(["VARIANCEPARTITION_DREAM"])
+    v327(["CUSTOM_FILTERDIFFERENTIALTABLE"])
+    v240(( ))
+    v262(( ))
+    v320(( ))
+    v321(( ))
+    v323(( ))
+    end
+    subgraph "NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT [DIFFERENTIAL_FUNCTIONAL_ENRICHMENT]"
+    v399(["GPROFILER2_GOST"])
+    v405(["CUSTOM_TABULARTOGSEAGCT"])
+    v406(["CUSTOM_TABULARTOGSEACLS"])
+    v409(["CUSTOM_TABULARTOGSEACHIP"])
+    v414(["GSEA_GSEA"])
+    v436(["PROPR_GREA"])
+    v389(( ))
+    v390(( ))
+    v413(( ))
+    v439(( ))
+    v445(( ))
+    end
+    v470(["PLOT_EXPLORATORY"])
+    v488(["PLOT_DIFFERENTIAL"])
+    v507(["SHINYNGS_APP"])
+    v538(["RMARKDOWNNOTEBOOK"])
+    v545(["MAKE_REPORT_BUNDLE"])
+    v5(( ))
+    end
+    end
+    subgraph " "
+    v28[" "]
+    v41[" "]
+    v44[" "]
+    v45[" "]
+    v46[" "]
+    v72[" "]
+    v73[" "]
+    v74[" "]
+    v75[" "]
+    v76[" "]
+    v77[" "]
+    v78[" "]
+    v98[" "]
+    v140[" "]
+    v213[" "]
+    v214[" "]
+    v222[" "]
+    v223[" "]
+    v224[" "]
+    v246[" "]
+    v251[" "]
+    v252[" "]
+    v253[" "]
+    v257[" "]
+    v258[" "]
+    v259[" "]
+    v260[" "]
+    v261[" "]
+    v267[" "]
+    v268[" "]
+    v269[" "]
+    v270[" "]
+    v278[" "]
+    v279[" "]
+    v280[" "]
+    v281[" "]
+    v282[" "]
+    v283[" "]
+    v291[" "]
+    v292[" "]
+    v293[" "]
+    v294[" "]
+    v295[" "]
+    v296[" "]
+    v297[" "]
+    v303[" "]
+    v304[" "]
+    v305["adjacency"]
+    v306[" "]
+    v307[" "]
+    v308[" "]
+    v309[" "]
+    v400[" "]
+    v401[" "]
+    v402[" "]
+    v403[" "]
+    v404[" "]
+    v415[" "]
+    v416[" "]
+    v417[" "]
+    v418[" "]
+    v419[" "]
+    v420[" "]
+    v421[" "]
+    v422[" "]
+    v423[" "]
+    v424[" "]
+    v425[" "]
+    v426[" "]
+    v427[" "]
+    v428[" "]
+    v429[" "]
+    v430[" "]
+    v431[" "]
+    v432[" "]
+    v433[" "]
+    v437[" "]
+    v438["grea_results"]
+    v471[" "]
+    v472[" "]
+    v473[" "]
+    v474[" "]
+    v475[" "]
+    v476[" "]
+    v477[" "]
+    v478[" "]
+    v479[" "]
+    v480[" "]
+    v481[" "]
+    v489[" "]
+    v490[" "]
+    v508[" "]
+    v516["ch_collated_versions"]
+    v539[" "]
+    v540[" "]
+    v541[" "]
+    v542[" "]
+    v546[" "]
+    v547[" "]
+    end
+    subgraph "PIPELINE_INITIALISATION [PIPELINE_INITIALISATION]"
+    v3(( ))
+    end
+    v2 --> v3
+    v5 --> v27
+    v27 --> v28
+    v27 --> v5
+    v39 --> v40
+    v5 --> v40
+    v40 --> v41
+    v40 --> v5
+    v42 --> v43
+    v5 --> v43
+    v43 --> v46
+    v43 --> v45
+    v43 --> v44
+    v43 --> v5
+    v5 --> v71
+    v71 --> v78
+    v71 --> v77
+    v71 --> v76
+    v71 --> v75
+    v71 --> v74
+    v71 --> v73
+    v71 --> v72
+    v71 --> v5
+    v5 --> v97
+    v97 --> v98
+    v97 --> v5
+    v5 --> v126
+    v126 --> v5
+    v138 --> v139
+    v5 --> v139
+    v139 --> v140
+    v139 --> v5
+    v5 --> v172
+    v172 --> v5
+    v5 --> v212
+    v212 --> v214
+    v212 --> v213
+    v212 --> v5
+    v5 --> v221
+    v221 --> v224
+    v221 --> v223
+    v221 --> v222
+    v221 --> v5
+    v240 --> v246
+    v240 --> v251
+    v240 --> v252
+    v240 --> v253
+    v240 --> v256
+    v256 --> v261
+    v256 --> v260
+    v256 --> v259
+    v256 --> v258
+    v256 --> v257
+    v256 --> v262
+    v256 --> v320
+    v240 --> v266
+    v266 --> v270
+    v266 --> v269
+    v266 --> v268
+    v266 --> v267
+    v266 --> v240
+    v266 --> v262
+    v266 --> v321
+    v240 --> v277
+    v277 --> v283
+    v277 --> v282
+    v277 --> v281
+    v277 --> v280
+    v277 --> v279
+    v277 --> v278
+    v277 --> v262
+    v277 --> v320
+    v277 --> v323
+    v240 --> v290
+    v290 --> v297
+    v290 --> v296
+    v290 --> v295
+    v290 --> v294
+    v290 --> v293
+    v290 --> v292
+    v290 --> v291
+    v290 --> v240
+    v290 --> v262
+    v290 --> v321
+    v240 --> v302
+    v302 --> v309
+    v302 --> v308
+    v302 --> v307
+    v302 --> v306
+    v302 --> v305
+    v302 --> v304
+    v302 --> v303
+    v302 --> v240
+    v302 --> v262
+    v240 --> v314
+    v314 --> v240
+    v314 --> v262
+    v314 --> v321
+    v240 --> v327
+    v327 --> v5
+    v327 --> v262
+    v389 --> v399
+    v399 --> v404
+    v399 --> v403
+    v399 --> v402
+    v399 --> v401
+    v399 --> v400
+    v399 --> v5
+    v399 --> v439
+    v390 --> v405
+    v405 --> v390
+    v405 --> v439
+    v390 --> v406
+    v406 --> v390
+    v406 --> v439
+    v390 --> v409
+    v409 --> v413
+    v409 --> v439
+    v390 --> v414
+    v413 --> v414
+    v414 --> v433
+    v414 --> v432
+    v414 --> v431
+    v414 --> v430
+    v414 --> v429
+    v414 --> v428
+    v414 --> v427
+    v414 --> v426
+    v414 --> v425
+    v414 --> v424
+    v414 --> v423
+    v414 --> v422
+    v414 --> v421
+    v414 --> v420
+    v414 --> v419
+    v414 --> v418
+    v414 --> v417
+    v414 --> v416
+    v414 --> v415
+    v414 --> v439
+    v414 --> v445
+    v389 --> v436
+    v436 --> v438
+    v436 --> v437
+    v436 --> v439
+    v5 --> v470
+    v470 --> v481
+    v470 --> v480
+    v470 --> v479
+    v470 --> v478
+    v470 --> v477
+    v470 --> v476
+    v470 --> v475
+    v470 --> v474
+    v470 --> v473
+    v470 --> v472
+    v470 --> v471
+    v470 --> v5
+    v5 --> v488
+    v488 --> v490
+    v488 --> v489
+    v488 --> v5
+    v5 --> v507
+    v507 --> v508
+    v507 --> v5
+    v513 --> v5
+    v5 --> v516
+    v520 --> v5
+    v5 --> v538
+    v538 --> v542
+    v538 --> v541
+    v538 --> v540
+    v538 --> v539
+    v538 --> v5
+    v5 --> v545
+    v545 --> v547
+    v545 --> v546
+    v3 --> v5
+    v240 --> v5
+    v262 --> v5
+    v320 --> v5
+    v321 --> v5
+    v323 --> v5
+    v439 --> v5
+    v445 --> v5
+    v5 --> v240
+    v5 --> v389
+    v5 --> v390
+
+</pre>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, maxTextSize: Number.MAX_SAFE_INTEGER, maxEdges: Number.MAX_SAFE_INTEGER });
+</script>
+</body>
+</html>

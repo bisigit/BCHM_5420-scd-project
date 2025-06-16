@@ -1,0 +1,754 @@
+Jun-06 18:11:48.274 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/differentialabundance --study_name stroke_in_sickle_cell --study_type rnaseq --input pipeline/sdc_samplesheet.tsv --matrix pipeline/sdc_counts.tsv --contrasts pipeline/sdc_contrasts.csv --outdir results --features pipeline/sdc_annotations.tsv --features_id_col gene_id --features_name_col gene_name --gprofiler2_organism hsapiens -r dev -profile conda -with-report report.html -with-trace trace.txt
+Jun-06 18:11:48.357 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.3
+Jun-06 18:11:48.379 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/biem/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.0,nf-k8s@1.0.0,nf-tower@1.11.3,nf-wave@1.12.1
+Jun-06 18:11:48.400 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-06 18:11:48.401 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-06 18:11:48.404 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jun-06 18:11:48.416 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-06 18:11:48.426 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/biem/.nextflow/scm
+Jun-06 18:11:49.304 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/biem/.nextflow/assets/nf-core/differentialabundance/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/differentialabundance.git
+Jun-06 18:11:49.333 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Jun-06 18:11:49.341 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/biem/.nextflow/assets/nf-core/differentialabundance/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/differentialabundance.git
+Jun-06 18:11:50.333 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/biem/.nextflow/assets/nf-core/differentialabundance/nextflow.config
+Jun-06 18:11:50.334 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/biem/.nextflow/assets/nf-core/differentialabundance/nextflow.config
+Jun-06 18:11:50.341 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/biem/.nextflow/secrets/store.json
+Jun-06 18:11:50.343 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@5d5c41e5] - activable => nextflow.secret.LocalSecretsProvider@5d5c41e5
+Jun-06 18:11:50.355 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `conda`
+Jun-06 18:11:51.626 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, alice, mjolnir_globe, uppmax, giga, maxquant, incliva, ilifu, test_rnaseq_limma, ki_luria, uge, icr_alma, rosalind_uge, lugh, mccleary, unibe_ibu, soft, test_soft, vai, czbiohub_aws, jax, roslin, tes, rnaseq_dream, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, ceci_nic5, ccga_cau, humantechnopole, stjude, daisybio, eddie, medair, test_maxquant, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, seattlechildrens, icr_davros, ceres, arm, munin, rnaseq, rosalind, hasta, cfc, uzh, shu_bmrc, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, shifter, biohpc_gen, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, ceci_dragon2, imperial, maestro, software_license, cannon, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, kaust, alliance_canada, affy, mpcdf, rnaseq_limma, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, seg_globe, mssm, sanger, dkfz, bluebear, pasteur, einstein, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, seadragon, crukmi, csiro_petrichor, qmul_apocrita, wave, docker, engaging, gis, hypatia, psmn, eva, unity, cropdiversityhpc, test_nogtf, nygc, fgcz, conda, crg, singularity, test_rnaseq_dream, mpcdf_viper, pe2, self_hosted_runner, tufts, uw_hyak_pedslabs, binac2, debug, test_affy, genouest, cbe, unsw_katana, gitpod, phoenix, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac, fsu_draco]
+Jun-06 18:11:51.678 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Jun-06 18:11:51.679 [main] DEBUG nextflow.cli.CmdRun - Launching `https://github.com/nf-core/differentialabundance` [confident_williams] DSL2 - revision: a9e97d0dc8 [dev]
+Jun-06 18:11:51.681 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.3.0]
+Jun-06 18:11:51.681 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jun-06 18:11:51.681 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.3.0]
+Jun-06 18:11:51.683 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.3.0
+Jun-06 18:11:51.699 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.3.0' resolved
+Jun-06 18:11:51.700 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.3.0'
+Jun-06 18:11:51.706 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.3.0
+Jun-06 18:11:51.761 [main] DEBUG nextflow.Session - Session UUID: f8e88f9a-53bd-402d-887f-ef37da1af5d4
+Jun-06 18:11:51.761 [main] DEBUG nextflow.Session - Run name: confident_williams
+Jun-06 18:11:51.762 [main] DEBUG nextflow.Session - Executor pool size: 4
+Jun-06 18:11:51.770 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jun-06 18:11:51.774 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jun-06 18:11:51.790 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.3 build 5949
+  Created: 02-06-2025 20:56 UTC (14:56 MDT)
+  System: Linux 5.15.167.4-microsoft-standard-WSL2
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.14-internal+0-adhoc..src
+  Encoding: UTF-8 (ANSI_X3.4-1968)
+  Process: 24313@Bisiii [127.0.1.1]
+  CPUs: 4 - Mem: 13.7 GB (9.9 GB) - Swap: 4 GB (4 GB)
+Jun-06 18:11:51.801 [main] DEBUG nextflow.Session - Work-dir: /home/biem/BCHM5420/BCHM_5420-scd-project/work [ext2/ext3]
+Jun-06 18:11:51.802 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/biem/.nextflow/assets/nf-core/differentialabundance/bin
+Jun-06 18:11:51.811 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jun-06 18:11:51.821 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jun-06 18:11:51.839 [main] DEBUG nextflow.Session - Observer factory: ValidationObserverFactory
+Jun-06 18:11:51.858 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jun-06 18:11:51.891 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jun-06 18:11:51.898 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Jun-06 18:11:51.947 [main] DEBUG nextflow.Session - Session start
+Jun-06 18:11:51.950 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/biem/BCHM5420/BCHM_5420-scd-project/trace.txt
+Jun-06 18:11:51.952 [main] DEBUG nextflow.Session - Trace file already exists: /home/biem/BCHM5420/BCHM_5420-scd-project/trace.txt -- enable the 'trace.overwrite' option in your config file to overwrite existing files
+nextflow.exception.AbortOperationException: Trace file already exists: /home/biem/BCHM5420/BCHM_5420-scd-project/trace.txt -- enable the 'trace.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:67)
+	at nextflow.trace.TraceFileObserver.onFlowCreate(TraceFileObserver.groovy:206)
+	at nextflow.Session$_notifyFlowCreate_lambda40.doCall(Session.groovy:1093)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyFlowCreate(Session.groovy:1093)
+	at nextflow.Session.start(Session.groovy:585)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:133)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)
+Caused by: java.nio.file.FileAlreadyExistsException: /home/biem/BCHM5420/BCHM_5420-scd-project/trace.txt
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:218)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:484)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:228)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:3008)
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:64)
+	... 9 common frames omitted
+Jun-06 18:11:51.955 [main] DEBUG nextflow.Session - Report file already exists: /home/biem/BCHM5420/BCHM_5420-scd-project/report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+nextflow.exception.AbortOperationException: Report file already exists: /home/biem/BCHM5420/BCHM_5420-scd-project/report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.ReportObserver.onFlowCreate(ReportObserver.groovy:133)
+	at nextflow.Session$_notifyFlowCreate_lambda40.doCall(Session.groovy:1093)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyFlowCreate(Session.groovy:1093)
+	at nextflow.Session.start(Session.groovy:585)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:133)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)
+Jun-06 18:11:52.072 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jun-06 18:11:53.124 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Jun-06 18:11:53.132 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Jun-06 18:11:53.160 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Jun-06 18:11:53.161 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Jun-06 18:11:55.117 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Jun-06 18:11:55.118 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Jun-06 18:11:55.120 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Jun-06 18:11:55.121 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Jun-06 18:11:55.649 [main] INFO  nextflow.Nextflow - 
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/differentialabundance 1.6.0dev[0m
+-[2m----------------------------------------------------[0m-
+[1m[base] Input/output options[0m
+  [0;34mstudy_name                  : [0;32mstroke_in_sickle_cell[0m
+  [0;34minput                       : [0;32mpipeline/sdc_samplesheet.tsv[0m
+  [0;34mcontrasts                   : [0;32mpipeline/sdc_contrasts.csv[0m
+  [0;34moutdir                      : [0;32mresults[0m
+
+[1m[base] Abundance values[0m
+  [0;34mmatrix                      : [0;32mpipeline/sdc_counts.tsv[0m
+
+[1m[base] Features options[0m
+  [0;34mfeatures                    : [0;32mpipeline/sdc_annotations.tsv[0m
+
+[1m[base] Paramsheet options[0m
+  [0;34mparamsheet                  : [0;32m/home/biem/.nextflow/assets/nf-core/differentialabundance/assets/paramsheet.csv[0m
+
+[1m[preprocessing] Filtering[0m
+  [0;34mfiltering_min_abundance     : [0;32m1.0[0m
+  [0;34mfiltering_min_samples       : [0;32m1.0[0m
+
+[1m[differential] Differential analysis[0m
+  [0;34mdifferential_min_fold_change: [0;32m2.0[0m
+  [0;34mdifferential_max_pval       : [0;32m1.0[0m
+
+[1m[differential] Limma specific options[0m
+  [0;34mlimma_p_value               : [0;32m1.0[0m
+
+[1m[functional] gprofiler2[0m
+  [0;34mgprofiler2_organism         : [0;32mhsapiens[0m
+
+[1mGeneric options[0m
+  [0;34mtrace_report_suffix         : [0;32m2025-06-06_18-11-50[0m
+
+[1mCore Nextflow options[0m
+  [0;34mrevision                    : [0;32mdev[0m
+  [0;34mrunName                     : [0;32mconfident_williams[0m
+  [0;34mcontainer.RMARKDOWNNOTEBOOK : [0;32mbiocontainers/r-shinyngs:1.8.8--r43hdfd78af_0[0m
+  [0;34mlaunchDir                   : [0;32m/home/biem/BCHM5420/BCHM_5420-scd-project[0m
+  [0;34mworkDir                     : [0;32m/home/biem/BCHM5420/BCHM_5420-scd-project/work[0m
+  [0;34mprojectDir                  : [0;32m/home/biem/.nextflow/assets/nf-core/differentialabundance[0m
+  [0;34muserName                    : [0;32mbiem[0m
+  [0;34mprofile                     : [0;32mconda[0m
+  [0;34mconfigFiles                 : [0;32m/home/biem/.nextflow/assets/nf-core/differentialabundance/nextflow.config[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+* The pipeline
+    https://doi.org/10.5281/zenodo.7568000
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/differentialabundance/blob/master/CITATIONS.md
+
+Jun-06 18:11:55.652 [main] DEBUG n.validation.ValidationExtension - Starting parameters validation
+Jun-06 18:11:55.801 [main] DEBUG nextflow.validation.SchemaEvaluator - Started validating /home/biem/BCHM5420/BCHM_5420-scd-project/pipeline/sdc_samplesheet.tsv
+Jun-06 18:11:55.849 [main] DEBUG nextflow.validation.SchemaEvaluator - Validation of file 'pipeline/sdc_samplesheet.tsv' passed!
+Jun-06 18:11:55.856 [main] DEBUG n.v.FormatDirectoryPathEvaluator - Cloud blob storage paths are not supported by 'FormatDirectoryPathEvaluator': 's3://ngi-igenomes/igenomes/'
+Jun-06 18:11:55.857 [main] DEBUG n.validation.ValidationExtension - Finishing parameters validation
+Jun-06 18:11:56.010 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:UNTAR
+Jun-06 18:11:56.024 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.025 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.031 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jun-06 18:11:56.036 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=13.7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Jun-06 18:11:56.039 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jun-06 18:11:56.060 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:UNTAR': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.124 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:AFFY_JUSTRMA_RAW
+Jun-06 18:11:56.126 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:AFFY_JUSTRMA_RAW` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:AFFY_JUSTRMA_RAW
+Jun-06 18:11:56.132 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.132 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.135 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:AFFY_JUSTRMA_RAW': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.145 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:AFFY_JUSTRMA_NORM
+Jun-06 18:11:56.148 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:AFFY_JUSTRMA_NORM` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:AFFY_JUSTRMA_NORM
+Jun-06 18:11:56.153 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.154 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.154 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:AFFY_JUSTRMA_NORM': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.210 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PROTEUS
+Jun-06 18:11:56.212 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PROTEUS` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PROTEUS
+Jun-06 18:11:56.218 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.218 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.219 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PROTEUS': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.267 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GEOQUERY_GETGEO
+Jun-06 18:11:56.268 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GEOQUERY_GETGEO` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GEOQUERY_GETGEO
+Jun-06 18:11:56.273 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.273 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.274 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GEOQUERY_GETGEO': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.333 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GUNZIP_GTF
+Jun-06 18:11:56.334 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GUNZIP_GTF` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GUNZIP_GTF
+Jun-06 18:11:56.344 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.344 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.345 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GUNZIP_GTF': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.382 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE
+Jun-06 18:11:56.383 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GTF_TO_TABLE` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE
+Jun-06 18:11:56.386 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.386 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.386 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.453 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR
+Jun-06 18:11:56.454 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:VALIDATOR` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR
+Jun-06 18:11:56.457 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.457 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.459 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.524 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:IMMUNEDECONV
+Jun-06 18:11:56.525 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:IMMUNEDECONV` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:IMMUNEDECONV
+Jun-06 18:11:56.528 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.528 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.528 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:IMMUNEDECONV': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.555 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER
+Jun-06 18:11:56.556 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_MATRIXFILTER` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER
+Jun-06 18:11:56.558 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.559 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.559 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.631 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:LIMMA_NORM
+Jun-06 18:11:56.632 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:LIMMA_DIFFERENTIAL` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:LIMMA_NORM
+Jun-06 18:11:56.633 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:LIMMA_NORM` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:LIMMA_NORM
+Jun-06 18:11:56.636 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.636 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.637 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:LIMMA_NORM': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.655 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:LIMMA_DIFFERENTIAL
+Jun-06 18:11:56.656 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:LIMMA_DIFFERENTIAL` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:LIMMA_DIFFERENTIAL
+Jun-06 18:11:56.659 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.659 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.660 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:LIMMA_DIFFERENTIAL': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.684 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_NORM
+Jun-06 18:11:56.685 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:DESEQ2_DIFFERENTIAL` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_NORM
+Jun-06 18:11:56.686 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:DESEQ2_NORM` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_NORM
+Jun-06 18:11:56.689 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.689 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.690 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_NORM': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.714 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_DIFFERENTIAL
+Jun-06 18:11:56.715 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:DESEQ2_DIFFERENTIAL` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_DIFFERENTIAL
+Jun-06 18:11:56.718 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.719 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.719 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_DIFFERENTIAL': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.746 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:PROPR_PROPD
+Jun-06 18:11:56.752 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.752 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.753 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:PROPR_PROPD': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.775 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:VARIANCEPARTITION_DREAM
+Jun-06 18:11:56.778 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:VARIANCEPARTITION_DREAM` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:VARIANCEPARTITION_DREAM
+Jun-06 18:11:56.781 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.781 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.782 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:VARIANCEPARTITION_DREAM': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.827 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:CUSTOM_FILTERDIFFERENTIALTABLE
+Jun-06 18:11:56.828 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_FILTERDIFFERENTIALTABLE` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:CUSTOM_FILTERDIFFERENTIALTABLE
+Jun-06 18:11:56.831 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.831 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.832 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:CUSTOM_FILTERDIFFERENTIALTABLE': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.948 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:GPROFILER2_GOST
+Jun-06 18:11:56.949 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GPROFILER2_GOST` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:GPROFILER2_GOST
+Jun-06 18:11:56.956 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.956 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.957 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:GPROFILER2_GOST': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.968 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEAGCT
+Jun-06 18:11:56.969 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_TABULARTOGSEAGCT` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEAGCT
+Jun-06 18:11:56.971 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.971 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.972 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEAGCT': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.980 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEACLS
+Jun-06 18:11:56.980 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_TABULARTOGSEACLS` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEACLS
+Jun-06 18:11:56.982 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.982 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.983 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEACLS': maxForks=0; fair=false; array=0
+Jun-06 18:11:56.995 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEACHIP
+Jun-06 18:11:56.996 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_TABULARTOGSEACHIP` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEACHIP
+Jun-06 18:11:56.998 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:56.998 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:56.999 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEACHIP': maxForks=0; fair=false; array=0
+Jun-06 18:11:57.010 [main] WARN  nextflow.extension.OperatorImpl - The operator `first` is useless when applied to a value channel which returns a single value by definition
+Jun-06 18:11:57.033 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:GSEA_GSEA
+Jun-06 18:11:57.034 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GSEA_GSEA` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:GSEA_GSEA
+Jun-06 18:11:57.039 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:57.040 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:57.040 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:GSEA_GSEA': maxForks=0; fair=false; array=0
+Jun-06 18:11:57.063 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:PROPR_GREA
+Jun-06 18:11:57.066 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:57.066 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:57.067 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:PROPR_GREA': maxForks=0; fair=false; array=0
+Jun-06 18:11:57.135 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY
+Jun-06 18:11:57.136 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PLOT_EXPLORATORY` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY
+Jun-06 18:11:57.139 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:57.139 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:57.140 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY': maxForks=0; fair=false; array=0
+Jun-06 18:11:57.160 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL
+Jun-06 18:11:57.161 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PLOT_DIFFERENTIAL` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL
+Jun-06 18:11:57.163 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:57.163 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:57.164 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL': maxForks=0; fair=false; array=0
+Jun-06 18:11:57.210 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP
+Jun-06 18:11:57.211 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SHINYNGS_APP` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP
+Jun-06 18:11:57.215 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:57.215 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:57.216 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP': maxForks=0; fair=false; array=0
+Jun-06 18:11:57.271 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK
+Jun-06 18:11:57.272 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:RMARKDOWNNOTEBOOK` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK
+Jun-06 18:11:57.275 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:57.275 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:57.276 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK': maxForks=0; fair=false; array=0
+Jun-06 18:11:57.333 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE
+Jun-06 18:11:57.335 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MAKE_REPORT_BUNDLE` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE
+Jun-06 18:11:57.336 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-06 18:11:57.336 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-06 18:11:57.337 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE': maxForks=0; fair=false; array=0
+Jun-06 18:11:57.347 [main] DEBUG nextflow.Session - Config process names validation disabled as requested
+Jun-06 18:11:57.350 [main] DEBUG nextflow.Session - Igniting dataflow network (35)
+Jun-06 18:11:57.351 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:UNTAR
+Jun-06 18:11:57.352 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:AFFY_JUSTRMA_RAW
+Jun-06 18:11:57.352 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:AFFY_JUSTRMA_NORM
+Jun-06 18:11:57.352 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PROTEUS
+Jun-06 18:11:57.356 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GEOQUERY_GETGEO
+Jun-06 18:11:57.356 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GUNZIP_GTF
+Jun-06 18:11:57.359 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE
+Jun-06 18:11:57.359 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR
+Jun-06 18:11:57.359 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:IMMUNEDECONV
+Jun-06 18:11:57.359 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER
+Jun-06 18:11:57.359 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:LIMMA_NORM
+Jun-06 18:11:57.359 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:LIMMA_DIFFERENTIAL
+Jun-06 18:11:57.359 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_NORM
+Jun-06 18:11:57.360 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_DIFFERENTIAL
+Jun-06 18:11:57.360 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:PROPR_PROPD
+Jun-06 18:11:57.360 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:VARIANCEPARTITION_DREAM
+Jun-06 18:11:57.360 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:CUSTOM_FILTERDIFFERENTIALTABLE
+Jun-06 18:11:57.360 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:GPROFILER2_GOST
+Jun-06 18:11:57.360 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEAGCT
+Jun-06 18:11:57.360 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEACLS
+Jun-06 18:11:57.360 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:CUSTOM_TABULARTOGSEACHIP
+Jun-06 18:11:57.360 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:GSEA_GSEA
+Jun-06 18:11:57.366 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DIFFERENTIAL_FUNCTIONAL_ENRICHMENT:PROPR_GREA
+Jun-06 18:11:57.366 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY
+Jun-06 18:11:57.366 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL
+Jun-06 18:11:57.366 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP
+Jun-06 18:11:57.366 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK
+Jun-06 18:11:57.366 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE
+Jun-06 18:11:57.367 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_215a636da7ab24a2: /home/biem/.nextflow/assets/nf-core/differentialabundance/subworkflows/nf-core/utils_nfschema_plugin/main.nf
+  Script_3b661bf3429394f3: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/propr/propd/main.nf
+  Script_5c4e8d4051efa81e: /home/biem/.nextflow/assets/nf-core/differentialabundance/subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+  Script_9dab89ae14af093d: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/zip/main.nf
+  Script_1a6661f1fced92e0: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/rmarkdownnotebook/parametrize.nf
+  Script_b75f12cdb32790df: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/validatefomcomponents/main.nf
+  Script_0cf36072c16b0310: /home/biem/.nextflow/assets/nf-core/differentialabundance/subworkflows/nf-core/abundance_differential_filter/main.nf
+  Script_87d31d7ed05d4ad7: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/custom/matrixfilter/main.nf
+  Script_a26fba9deb8cbbed: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/proteus/readproteingroups/main.nf
+  Script_ad0a2d10839bbf7a: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/custom/tabulartogseagct/main.nf
+  Script_1ace02d1a5a512ff: /home/biem/.nextflow/assets/nf-core/differentialabundance/subworkflows/nf-core/differential_functional_enrichment/main.nf
+  Script_fdfea4c84ce90899: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/custom/tabulartogseacls/main.nf
+  Script_223ca400878df5b0: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/untar/main.nf
+  Script_dd5a4f0c9293dd12: /home/biem/.nextflow/assets/nf-core/differentialabundance/main.nf
+  Script_dc077571db3423c1: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/affy/justrma/main.nf
+  Script_4f612cfd8c52e8cd: /home/biem/.nextflow/assets/nf-core/differentialabundance/subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+  Script_8f36ed514d4fc6a5: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/limma/differential/main.nf
+  Script_2269da2a9fa60e6e: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/app/main.nf
+  Script_ef2cf166f4de1a28: /home/biem/.nextflow/assets/nf-core/differentialabundance/workflows/differentialabundance.nf
+  Script_81b09f29ace35246: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/geoquery/getgeo/main.nf
+  Script_e413b8d8eaf0e343: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/propr/grea/main.nf
+  Script_687c9d34f2f49e37: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/rmarkdownnotebook/main.nf
+  Script_9e97525aacc041d1: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/staticdifferential/main.nf
+  Script_f0eb18bd7a6960bd: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/atlasgeneannotationmanipulation/gtf2featureannotation/main.nf
+  Script_c9f8eff666ba1a6e: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/deseq2/differential/main.nf
+  Script_f708b40b66383bca: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/immunedeconv/main.nf
+  Script_dfe2d6a2ac6d3ce3: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/gsea/gsea/main.nf
+  Script_da961a5aaedf75d1: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/variancepartition/dream/main.nf
+  Script_64c21dd68f034603: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/custom/tabulartogseachip/main.nf
+  Script_a35052a23a38ac46: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/gprofiler2/gost/main.nf
+  Script_9b5c5f5bba654d56: /home/biem/.nextflow/assets/nf-core/differentialabundance/subworkflows/local/utils_nfcore_differentialabundance_pipeline/main.nf
+  Script_a6b84a8d8db37c9d: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/gunzip/main.nf
+  Script_c63e33402773272b: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/custom/filterdifferentialtable/main.nf
+  Script_1b7c3c7b4e0550aa: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/staticexploratory/main.nf
+Jun-06 18:11:57.368 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jun-06 18:11:57.368 [main] DEBUG nextflow.Session - Session await
+Jun-06 18:11:57.531 [Actor Thread 51] INFO  nextflow.conda.CondaCache - Creating env using conda: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/validatefomcomponents/environment.yml [cache /home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-b2abc2da5f2d64b9-15b974fcefa3951c1538ce0c893cc321]
+Jun-06 18:12:16.727 [Actor Thread 51] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/validatefomcomponents/environment.yml path=/home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-b2abc2da5f2d64b9-15b974fcefa3951c1538ce0c893cc321
+Jun-06 18:12:16.803 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-06 18:12:16.805 [Task submitter] INFO  nextflow.Session - [a9/0d8013] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR (sdc_samplesheet.tsv)
+Jun-06 18:12:29.514 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR (sdc_samplesheet.tsv); status: COMPLETED; exit: 0; error: -; workDir: /home/biem/BCHM5420/BCHM_5420-scd-project/work/a9/0d8013b7c7b03943df51e3ede3aa66]
+Jun-06 18:12:29.515 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jun-06 18:12:29.572 [TaskFinalizer-1] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onProcessComplete(TraceFileObserver.groovy:270)
+	at nextflow.Session$_notifyTaskComplete_lambda34.doCall(Session.groovy:1063)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyTaskComplete(Session.groovy:1063)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:699)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:676)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jun-06 18:12:29.633 [Actor Thread 49] INFO  nextflow.conda.CondaCache - Creating env using conda: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/custom/matrixfilter/environment.yml [cache /home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-5a7c1dbd2ccae711-70ebcd4d660741af46d30d33f071a07a]
+Jun-06 18:12:37.307 [Actor Thread 49] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/custom/matrixfilter/environment.yml path=/home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-5a7c1dbd2ccae711-70ebcd4d660741af46d30d33f071a07a
+Jun-06 18:12:37.317 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-06 18:12:37.318 [Task submitter] INFO  nextflow.Session - [e8/59ecd1] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER ([paramset_names:[null], id:stroke_in_sickle_cell, params:[study_name:stroke_in_sickle_cell, study_type:rnaseq, input:pipeline/sdc_samplesheet.tsv, contrasts:pipeline/sdc_contrasts.csv, contrasts_yml:null, outdir:results, study_abundance_type:counts, round_digits:4, matrix:pipeline/sdc_counts.tsv, transcript_length_matrix:null, affy_cel_files_archive:null, querygse:null, observations_id_col:sample, observations_type:sample, observations_name_col:null, features_id_col:gene_id, features_name_col:gene_name, features_type:gene, sizefactors_from_controls:false, control_features:null, features_metadata_cols:gene_id,gene_name,gene_biotype, features:pipeline/sdc_annotations.tsv, paramsheet:/home/biem/.nextflow/assets/nf-core/differentialabundance/assets/paramsheet.csv, affy_file_name_col:file, affy_background:true, affy_bgversion:2, affy_destructive:false, affy_cdfname:null, affy_build_annotation:true, affy_rm_mask:false, affy_rm_outliers:false, affy_rm_extra:false, gtf:null, features_gtf_feature_type:transcript, features_gtf_table_first_field:gene_id, proteus_measurecol_prefix:LFQ intensity, proteus_norm_function:normalizeMedian, proteus_plotsd_method:violin, proteus_plotmv_loess:true, proteus_palette_name:Set1, filtering_min_abundance:1.0, filtering_min_samples:1.0, filtering_min_proportion:null, filtering_grouping_var:null, filtering_min_proportion_not_na:0.5, filtering_min_samples_not_na:null, immunedeconv_run:false, immunedeconv_method:quantiseq, immunedeconv_function:deconvolute]])
+Jun-06 18:12:40.462 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER ([paramset_names:[null], id:stroke_in_sickle_cell, params:[study_name:stroke_in_sickle_cell, study_type:rnaseq, input:pipeline/sdc_samplesheet.tsv, contrasts:pipeline/sdc_contrasts.csv, contrasts_yml:null, outdir:results, study_abundance_type:counts, round_digits:4, matrix:pipeline/sdc_counts.tsv, transcript_length_matrix:null, affy_cel_files_archive:null, querygse:null, observations_id_col:sample, observations_type:sample, observations_name_col:null, features_id_col:gene_id, features_name_col:gene_name, features_type:gene, sizefactors_from_controls:false, control_features:null, features_metadata_cols:gene_id,gene_name,gene_biotype, features:pipeline/sdc_annotations.tsv, paramsheet:/home/biem/.nextflow/assets/nf-core/differentialabundance/assets/paramsheet.csv, affy_file_name_col:file, affy_background:true, affy_bgversion:2, affy_destructive:false, affy_cdfname:null, affy_build_annotation:true, affy_rm_mask:false, affy_rm_outliers:false, affy_rm_extra:false, gtf:null, features_gtf_feature_type:transcript, features_gtf_table_first_field:gene_id, proteus_measurecol_prefix:LFQ intensity, proteus_norm_function:normalizeMedian, proteus_plotsd_method:violin, proteus_plotmv_loess:true, proteus_palette_name:Set1, filtering_min_abundance:1.0, filtering_min_samples:1.0, filtering_min_proportion:null, filtering_grouping_var:null, filtering_min_proportion_not_na:0.5, filtering_min_samples_not_na:null, immunedeconv_run:false, immunedeconv_method:quantiseq, immunedeconv_function:deconvolute]]); status: COMPLETED; exit: 0; error: -; workDir: /home/biem/BCHM5420/BCHM_5420-scd-project/work/e8/59ecd115b6e61ca48f0580dd029180]
+Jun-06 18:12:40.469 [TaskFinalizer-2] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onProcessComplete(TraceFileObserver.groovy:270)
+	at nextflow.Session$_notifyTaskComplete_lambda34.doCall(Session.groovy:1063)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyTaskComplete(Session.groovy:1063)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:699)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:676)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jun-06 18:12:40.517 [Actor Thread 48] INFO  nextflow.conda.CondaCache - Creating env using conda: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/deseq2/differential/environment.yml [cache /home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-f76cf97be8680582-accc88d9d75f0780428dff798025f21a]
+Jun-06 18:12:57.130 [Actor Thread 48] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/deseq2/differential/environment.yml path=/home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-f76cf97be8680582-accc88d9d75f0780428dff798025f21a
+Jun-06 18:12:57.145 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-06 18:12:57.146 [Task submitter] INFO  nextflow.Session - [d0/d5e8cb] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_DIFFERENTIAL (stroke_vs_control_stroke_in_sickle_cell)
+Jun-06 18:12:57.152 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-06 18:12:57.153 [Task submitter] INFO  nextflow.Session - [90/f170f1] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_NORM (stroke_in_sickle_cell)
+Jun-06 18:13:40.573 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_NORM (stroke_in_sickle_cell); status: COMPLETED; exit: 0; error: -; workDir: /home/biem/BCHM5420/BCHM_5420-scd-project/work/90/f170f1658820b72c8e87fdecd3c6f6]
+Jun-06 18:13:40.680 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_NORM > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Jun-06 18:13:40.691 [TaskFinalizer-3] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jun-06 18:13:40.723 [TaskFinalizer-3] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onProcessComplete(TraceFileObserver.groovy:270)
+	at nextflow.Session$_notifyTaskComplete_lambda34.doCall(Session.groovy:1063)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyTaskComplete(Session.groovy:1063)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:699)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:676)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jun-06 18:13:40.779 [Actor Thread 34] INFO  nextflow.conda.CondaCache - Creating env using conda: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/staticexploratory/environment.yml [cache /home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-5dc98fc4df4d19fd-15b974fcefa3951c1538ce0c893cc321]
+Jun-06 18:13:40.903 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_DIFFERENTIAL (stroke_vs_control_stroke_in_sickle_cell); status: COMPLETED; exit: 0; error: -; workDir: /home/biem/BCHM5420/BCHM_5420-scd-project/work/d0/d5e8cb95fc614db11e72b7fb1ad1c2]
+Jun-06 18:13:40.916 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:DESEQ2_DIFFERENTIAL > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Jun-06 18:13:40.935 [Actor Thread 48] INFO  nextflow.conda.CondaCache - Creating env using conda: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/custom/filterdifferentialtable/environment.yml [cache /home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-200f7006635f83c3-ddfbe68bbe35efe8edff6d01653e469f]
+Jun-06 18:13:40.947 [TaskFinalizer-4] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onProcessComplete(TraceFileObserver.groovy:270)
+	at nextflow.Session$_notifyTaskComplete_lambda34.doCall(Session.groovy:1063)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyTaskComplete(Session.groovy:1063)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:699)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:676)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jun-06 18:13:40.977 [Actor Thread 60] INFO  nextflow.conda.CondaCache - Creating env using conda: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/staticdifferential/environment.yml [cache /home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-d877bf4a5ef75a7a-15b974fcefa3951c1538ce0c893cc321]
+Jun-06 18:13:41.013 [Actor Thread 58] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.012 s; total time: 0.013 s
+Jun-06 18:13:41.020 [Actor Thread 58] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/biem/BCHM5420/BCHM_5420-scd-project/work/collect-file/879d50670efb76a9ae1758a6ac669448
+Jun-06 18:13:41.027 [Actor Thread 58] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-13093970055641544764
+Jun-06 18:13:41.032 [Actor Thread 58] INFO  nextflow.conda.CondaCache - Creating env using conda: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/app/environment.yml [cache /home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-30a2f6fcb3cf44ef-15b974fcefa3951c1538ce0c893cc321]
+Jun-06 18:13:59.893 [Actor Thread 34] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/staticexploratory/environment.yml path=/home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-5dc98fc4df4d19fd-15b974fcefa3951c1538ce0c893cc321
+Jun-06 18:13:59.907 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-06 18:13:59.907 [Task submitter] INFO  nextflow.Session - [c3/d85f93] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY (condition)
+Jun-06 18:14:20.280 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY (condition); status: COMPLETED; exit: 0; error: -; workDir: /home/biem/BCHM5420/BCHM_5420-scd-project/work/c3/d85f935ce80ea3f8f5cd8b304c4546]
+Jun-06 18:14:20.292 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Jun-06 18:14:20.293 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Jun-06 18:14:20.293 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Jun-06 18:14:20.293 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Jun-06 18:14:20.293 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY > Skipping output binding because one or more optional files are missing: fileoutparam<9:1>
+Jun-06 18:14:20.301 [TaskFinalizer-5] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onProcessComplete(TraceFileObserver.groovy:270)
+	at nextflow.Session$_notifyTaskComplete_lambda34.doCall(Session.groovy:1063)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyTaskComplete(Session.groovy:1063)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:699)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:676)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jun-06 18:14:20.838 [Actor Thread 58] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/app/environment.yml path=/home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-30a2f6fcb3cf44ef-15b974fcefa3951c1538ce0c893cc321
+Jun-06 18:14:20.847 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-06 18:14:20.848 [Task submitter] INFO  nextflow.Session - [97/43255b] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP (stroke_in_sickle_cell)
+Jun-06 18:14:36.974 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP (stroke_in_sickle_cell); status: COMPLETED; exit: 0; error: -; workDir: /home/biem/BCHM5420/BCHM_5420-scd-project/work/97/43255b49dbf30f7b9a4d2e76ab1146]
+Jun-06 18:14:36.980 [TaskFinalizer-6] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onProcessComplete(TraceFileObserver.groovy:270)
+	at nextflow.Session$_notifyTaskComplete_lambda34.doCall(Session.groovy:1063)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyTaskComplete(Session.groovy:1063)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:699)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:676)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jun-06 18:14:49.791 [Actor Thread 60] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/shinyngs/staticdifferential/environment.yml path=/home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-d877bf4a5ef75a7a-15b974fcefa3951c1538ce0c893cc321
+Jun-06 18:14:49.800 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-06 18:14:49.800 [Task submitter] INFO  nextflow.Session - [7f/2664ce] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL (stroke_vs_control_stroke_in_sickle_cell)
+Jun-06 18:15:02.611 [Actor Thread 48] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/custom/filterdifferentialtable/environment.yml path=/home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-200f7006635f83c3-ddfbe68bbe35efe8edff6d01653e469f
+Jun-06 18:15:04.670 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL (stroke_vs_control_stroke_in_sickle_cell); status: COMPLETED; exit: 0; error: -; workDir: /home/biem/BCHM5420/BCHM_5420-scd-project/work/7f/2664ce1327ba9e38916d9112173f38]
+Jun-06 18:15:04.673 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Jun-06 18:15:04.674 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-06 18:15:04.674 [Task submitter] INFO  nextflow.Session - [73/18fe01] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:CUSTOM_FILTERDIFFERENTIALTABLE (stroke_vs_control_stroke_in_sickle_cell)
+Jun-06 18:15:04.680 [TaskFinalizer-7] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onProcessComplete(TraceFileObserver.groovy:270)
+	at nextflow.Session$_notifyTaskComplete_lambda34.doCall(Session.groovy:1063)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyTaskComplete(Session.groovy:1063)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:699)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:676)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jun-06 18:15:05.774 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:ABUNDANCE_DIFFERENTIAL_FILTER:CUSTOM_FILTERDIFFERENTIALTABLE (stroke_vs_control_stroke_in_sickle_cell); status: COMPLETED; exit: 0; error: -; workDir: /home/biem/BCHM5420/BCHM_5420-scd-project/work/73/18fe01947bc591fde49c7455f6a499]
+Jun-06 18:15:05.779 [TaskFinalizer-8] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onProcessComplete(TraceFileObserver.groovy:270)
+	at nextflow.Session$_notifyTaskComplete_lambda34.doCall(Session.groovy:1063)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyTaskComplete(Session.groovy:1063)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:699)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:676)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jun-06 18:15:05.791 [Actor Thread 54] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 8; slices: 1; internal sort time: 0.002 s; external sort time: 0.003 s; total time: 0.005 s
+Jun-06 18:15:05.800 [Actor Thread 54] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/biem/BCHM5420/BCHM_5420-scd-project/work/collect-file/842ad332e3bb64fbf96cda3a2961dba1
+Jun-06 18:15:05.800 [Actor Thread 56] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 8; slices: 1; internal sort time: 0.002 s; external sort time: 0.001 s; total time: 0.003 s
+Jun-06 18:15:05.802 [Actor Thread 54] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-10648738128578838555
+Jun-06 18:15:05.805 [Actor Thread 56] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/biem/BCHM5420/BCHM_5420-scd-project/work/collect-file/3f7d8a98f9e21e22327660fcc7e64fac
+Jun-06 18:15:05.806 [Actor Thread 56] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-11350358093461855519
+Jun-06 18:15:05.852 [Actor Thread 53] INFO  nextflow.conda.CondaCache - Creating env using conda: bioconda::r-shinyngs=1.8.8 [cache /home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-81aeeb1de5d798efce8cdabe1f9cf5cd]
+Jun-06 18:15:38.799 [Actor Thread 53] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=bioconda::r-shinyngs=1.8.8 path=/home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-81aeeb1de5d798efce8cdabe1f9cf5cd
+Jun-06 18:15:38.803 [Actor Thread 52] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /home/biem/.nextflow/assets/nf-core/differentialabundance/assets/differentialabundance_report.Rmd
+Jun-06 18:15:38.809 [Actor Thread 52] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /home/biem/.nextflow/assets/nf-core/differentialabundance/docs/images/nf-core-differentialabundance_logo_light.png
+Jun-06 18:15:38.811 [Actor Thread 52] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /home/biem/.nextflow/assets/nf-core/differentialabundance/assets/nf-core_style.css
+Jun-06 18:15:38.812 [Actor Thread 52] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /home/biem/.nextflow/assets/nf-core/differentialabundance/CITATIONS.md
+Jun-06 18:15:38.821 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-06 18:15:38.821 [Task submitter] INFO  nextflow.Session - [cd/9ae6fd] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK (stroke_in_sickle_cell)
+Jun-06 18:16:05.697 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK (stroke_in_sickle_cell); status: COMPLETED; exit: 0; error: -; workDir: /home/biem/BCHM5420/BCHM_5420-scd-project/work/cd/9ae6fd811276c005e75717a101fc1f]
+Jun-06 18:16:05.703 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Jun-06 18:16:05.707 [TaskFinalizer-9] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onProcessComplete(TraceFileObserver.groovy:270)
+	at nextflow.Session$_notifyTaskComplete_lambda34.doCall(Session.groovy:1063)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyTaskComplete(Session.groovy:1063)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:699)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:676)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jun-06 18:16:05.712 [Actor Thread 52] INFO  nextflow.conda.CondaCache - Creating env using conda: /home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/zip/environment.yml [cache /home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-fd5d4fbbb897209b-3ee8955b4fdad52f1b93fd2801ce6920]
+Jun-06 18:16:20.735 [Actor Thread 52] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/home/biem/.nextflow/assets/nf-core/differentialabundance/modules/nf-core/zip/environment.yml path=/home/biem/BCHM5420/BCHM_5420-scd-project/work/conda/env-fd5d4fbbb897209b-3ee8955b4fdad52f1b93fd2801ce6920
+Jun-06 18:16:20.746 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-06 18:16:20.746 [Task submitter] INFO  nextflow.Session - [99/85c6e7] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE (stroke_in_sickle_cell)
+Jun-06 18:16:22.057 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE (stroke_in_sickle_cell); status: COMPLETED; exit: 0; error: -; workDir: /home/biem/BCHM5420/BCHM_5420-scd-project/work/99/85c6e7d057394ebcba69eec19eb0e4]
+Jun-06 18:16:22.061 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jun-06 18:16:22.062 [TaskFinalizer-10] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.send(Object)" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onProcessComplete(TraceFileObserver.groovy:270)
+	at nextflow.Session$_notifyTaskComplete_lambda34.doCall(Session.groovy:1063)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyTaskComplete(Session.groovy:1063)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:699)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:676)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jun-06 18:16:22.157 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jun-06 18:16:22.157 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jun-06 18:16:22.164 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Jun-06 18:16:22.166 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Jun-06 18:16:22.171 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/differentialabundance][0;32m Pipeline completed successfully[0m-
+Jun-06 18:16:22.176 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=10; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=3m 13s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=12 GB; ]
+Jun-06 18:16:22.176 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Jun-06 18:16:22.176 [main] DEBUG nextflow.Session - Cannot invoke "groovyx.gpars.agent.Agent.await()" because "this.writer" is null
+java.lang.NullPointerException: Cannot invoke "groovyx.gpars.agent.Agent.await()" because "this.writer" is null
+	at nextflow.trace.TraceFileObserver.onFlowComplete(TraceFileObserver.groovy:221)
+	at nextflow.Session$_notifyFlowComplete_lambda45.doCall(Session.groovy:1107)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1107)
+	at nextflow.Session.shutdown0(Session.groovy:768)
+	at nextflow.Session.destroy(Session.groovy:713)
+	at nextflow.script.ScriptRunner.shutdown(ScriptRunner.groovy:263)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:147)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)
+Jun-06 18:16:22.176 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Jun-06 18:16:22.514 [main] WARN  nextflow.trace.ReportObserver - Failed to render execution report -- see the log file for details
+nextflow.exception.AbortOperationException: Report file already exists: /home/biem/BCHM5420/BCHM_5420-scd-project/report.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:67)
+	at nextflow.trace.ReportObserver.renderHtml(ReportObserver.groovy:284)
+	at nextflow.trace.ReportObserver.onFlowComplete(ReportObserver.groovy:143)
+	at nextflow.Session$_notifyFlowComplete_lambda45.doCall(Session.groovy:1107)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1107)
+	at nextflow.Session.shutdown0(Session.groovy:768)
+	at nextflow.Session.destroy(Session.groovy:713)
+	at nextflow.script.ScriptRunner.shutdown(ScriptRunner.groovy:263)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:147)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)
+Caused by: java.nio.file.FileAlreadyExistsException: /home/biem/BCHM5420/BCHM_5420-scd-project/report.html
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:218)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:484)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:228)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:3008)
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:64)
+	... 12 common frames omitted
+Jun-06 18:16:22.515 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Jun-06 18:16:22.794 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jun-06 18:16:22.819 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-schema@2.3.0'
+Jun-06 18:16:22.819 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-schema
+Jun-06 18:16:22.821 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Jun-06 18:16:22.822 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
