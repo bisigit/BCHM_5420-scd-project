@@ -11,16 +11,12 @@ cd BCHM_5420-scd-project/
 5. Create a structured directory tree
 ```
 mkdir -p pipeline \
-         scripts \
-         results/differentialabundance \
-         r_analysis/plots \
-         logs
+         r_scripts \
+         results/
 ```
-7. Create placeholder files
+6. Create placeholder files
 ```
 touch pipeline/samplesheet.csv
-touch scripts/run_differentialabundance.sh
-touch r_analysis/ppi_analysis.R
 touch README.md
 touch .gitignore
 ```
