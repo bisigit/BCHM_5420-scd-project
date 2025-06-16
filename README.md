@@ -15,5 +15,8 @@ See nfcore
 ## Input
 File type
 
+## Installation instructions
+-nextflow
+
 ## output
 
