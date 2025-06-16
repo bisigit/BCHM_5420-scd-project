@@ -1,5 +1,4 @@
-# Project documentation: Details on how I did what I did.
-
+# Project documentation: Nextflow Pipeline
 ## I. House-keeping 
 1. Create repository
 2. Update README (see README for details on project).
@@ -43,7 +42,7 @@ git push origin main
 ```
 8. Obtain the necessary files for the pipeline using R (see r_scripts folder)
 
-## Run Pipeline
+## II. Run Pipeline
 1. Run the pipeline
 ``` 
 nextflow run nf-core/differentialabundance \
