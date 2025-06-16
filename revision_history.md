@@ -1,3 +1,5 @@
+| Date | Author | Description of Update |
+| ---- | ------ | --------------------- |
 2025-06-06 | bisigit | Initial commit
  2025-06-06 | Bisi | Initial project structure with folders and placeholder files
  2025-06-06 | bisigit | Update project_details
