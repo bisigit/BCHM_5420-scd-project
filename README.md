@@ -22,6 +22,15 @@ flowchart TD
     D -- Leading edge genes -->  E[Protein interaction network - R, Cytoscape]
 ```
 
+## Guide to repository
+- Environments: Shows the environments present on local computer when running nextflow on the command line.
+- Pipeline: Contains input files for the Nextflow pipeline.
+- R_scripts: Contains all the R scripts used for the R-based analyses.
+- Results: Contains all the results generated from the pipeline run, R, and cytoscape.
+- Nextflow_setup: Contains details on how the nextflow pipeline (nf-core/differentialabundance) was run.
+- .gitignore: Information on the types of files prevented from uploading.
+-  Revision history: Shows the changes that have been made to the repository so far. 
+  
 ## Quick-start
 ```
  nextflow run nf-core/differentialabundance \
