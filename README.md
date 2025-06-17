@@ -5,6 +5,14 @@ Sickle cell disease (SCD) is a hereditary blood disorder primarily caused by a m
 The aim of this study is to examine the transcriptomic profile of circulating endothelial cells in sickle cell anemia (SCA) stroke and to identify the differentially expressed genes in patients with and without a history of ischemic stroke.
 This repository has been set up to document and store all details, steps, and input files required for the execution of this project. 
 
+### Purpose 
+This repository has been established to document and store all necessary details, steps, and input files required for the execution of this project. The existence of this repository will enable replication of this project by anyone with access to the tools used. 
+The following tools are used in this project: 
+- Rstudio (v2024.12.1+563)
+- Nextflow (v25.04.3)
+- VS Code (v 1.101.0)
+- Cytoscape (v3.10.3) 
+
 ```mermaid
 flowchart TD
     A[Count matrix from GEO datasets - Browser] --> B[Count matrix processing - R]
@@ -59,6 +67,11 @@ conda activate env_nf
 conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
+### RStudio 
+- Instructions for R installation on various operating systems can be found on the R-project website here: https://cran.r-project.org/
+
+### Cytoscape 
+- Cytoscape can be downloaded from the Cytoscape organization here: https://cytoscape.org/download.html
 
 ## Output
 ```
@@ -105,4 +118,8 @@ results/
     └── processed_abundance/
         └── all.normalised_counts.tsv
 ```
+
+## Outputs 
+| Output   | Description |
+| -------| ----------- | 
 
