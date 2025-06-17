@@ -1,12 +1,11 @@
 # Transcriptomic analysis of circulating endothelial cells in sickle cell anemia (SCA) stroke
 
 ## Introduction
-Sickle cell disease (SCD) is a hereditary blood disorder primarily caused by a mutation in the β-globin gene, resulting in abnormal hemoglobin molecules that cause a sickle, crescent shape in red blood cells. Ischemic and hemorrhagic strokes are a crucial cause of death in SCD, with ischemic stroke accounting for approximately 75% of stroke incidences
+Sickle cell disease (SCD) is a hereditary blood disorder primarily caused by a mutation in the β-globin gene, resulting in abnormal hemoglobin molecules that cause a sickle, crescent shape in red blood cells. Ischemic and hemorrhagic strokes are a crucial cause of death in SCD, with ischemic stroke accounting for approximately 75% of stroke incidences.
 The aim of this study is to examine the transcriptomic profile of circulating endothelial cells in sickle cell anemia (SCA) stroke and to identify the differentially expressed genes in patients with and without a history of ischemic stroke.
-This repository has been set up to document and store all details, steps, and input files required for the execution of this project. 
 
 ### Purpose 
-This repository has been established to document and store all necessary details, steps, and input files required for the execution of this project. The existence of this repository will enable replication of this project by anyone with access to the tools used. 
+This repository has been established to document and store all necessary details, steps, and input files required for the execution of this project. The existence of this repository will enable replication of this project by anyone with access to the required tools. 
 The following tools are used in this project: 
 - Rstudio (v2024.12.1+563)
 - Nextflow (v25.04.3)
