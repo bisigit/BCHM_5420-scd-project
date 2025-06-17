@@ -11,8 +11,9 @@ The following tools are used in this project:
 - Rstudio (v2024.12.1+563)
 - Nextflow (v25.04.3)
 - VS Code (v 1.101.0)
-- Cytoscape (v3.10.3) 
-
+- Cytoscape (v3.10.3)
+  
+The project workflow is as follows:
 ```mermaid
 flowchart TD
     A[Count matrix from GEO datasets - Browser] --> B[Count matrix processing - R]
