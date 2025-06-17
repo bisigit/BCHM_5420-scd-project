@@ -81,7 +81,7 @@ conda config --add channels conda-forge
 - Instructions for R and Rstudio installation on various operating systems can be found on the R-project website here: https://cran.r-project.org/
 
 ### Cytoscape 
-- Cytoscape can be downloaded from the Cytoscape organization here: https://cytoscape.org/download.html
+- Cytoscape can be downloaded from the Cytoscape organization website here: https://cytoscape.org/download.html
 
 ## Output
 ```
