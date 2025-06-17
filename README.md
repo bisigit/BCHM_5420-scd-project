@@ -68,8 +68,8 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 - More options for Nextflow installation can be found on the Nextflow site here: https://nf-co.re/docs/usage/installation
-### RStudio 
-- Instructions for R installation on various operating systems can be found on the R-project website here: https://cran.r-project.org/
+### R and RStudio 
+- Instructions for R and Rstudio installation on various operating systems can be found on the R-project website here: https://cran.r-project.org/
 
 ### Cytoscape 
 - Cytoscape can be downloaded from the Cytoscape organization here: https://cytoscape.org/download.html
