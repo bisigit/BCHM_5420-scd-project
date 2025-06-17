@@ -67,6 +67,7 @@ conda activate env_nf
 conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
+- More options for Nextflow installation can be found on the Nextflow site here: https://nf-co.re/docs/usage/installation
 ### RStudio 
 - Instructions for R installation on various operating systems can be found on the R-project website here: https://cran.r-project.org/
 
@@ -119,7 +120,11 @@ results/
         └── all.normalised_counts.tsv
 ```
 
-## Outputs 
+## Some Key Outputs 
 | Output   | Description |
 | -------| ----------- | 
-
+stroke_vs_control_stroke_in_sickle_cell.deseq2.results.tsv | Shows the statistics on all genes analyzed |
+stroke_vs_control_stroke_in_sickle_cell.deseq2.results_filtered.tsv | Shows the statistics on statistically significant genes |
+volcano.png | Volcano plot of genes analyzed |
+pca2d.png | PCA plot of all samples |
+sample_dendrogram.png | Dendrogram of all samples |
