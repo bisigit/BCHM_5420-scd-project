@@ -60,5 +60,49 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
-## output
+## Output
+```
+results/
+├── other/
+│   └── deseq2/
+│       ├── stroke_vs_control_stroke_in_sickle_cell.dds.rld.rds
+│       └── stroke_vs_control_stroke_in_sickle_cell.deseq2.sizefactors.tsv
+├── pipeline_info/
+│   ├── collated_versions.yml
+│   ├── execution_timeline_2025-06-06_18-11-50.html
+│   ├── nf_core_differentialabundance_software_versions.yml
+│   ├── params_2025-06-06_18-11-55.json
+│   └── pipeline_dag_2025-06-06_18-11-50.html
+├── plots/
+│   ├── differential/
+│   │   └── stroke_vs_control_stroke_in_sickle_cell/
+│   │       └── png/
+│   │           ├── volcano.png
+│   │           └── versions.yml
+│   ├── exploratory/
+│   │   └── condition/
+│   │       └── png/
+│   │           ├── boxplot.png
+│   │           ├── density.png
+│   │           ├── mad_correlation.png
+│   │           ├── pca2d.png
+│   │           ├── pca3d.png
+│   │           ├── sample_dendrogram.png
+│   │           └── versions.yml
+│   └── qc/
+├── report/
+│   ├── stroke_in_sickle_cell.html
+│   └── stroke_in_sickle_cell.zip
+├── shinyngs_app/
+│   └── stroke_in_sickle_cell/
+│       ├── app.R
+│       ├── data.rds
+│       └── versions.yml
+└── tables/
+    ├── differential/
+    │   ├── stroke_vs_control_stroke_in_sickle_cell.deseq2.results.tsv
+    │   └── stroke_vs_control_stroke_in_sickle_cell.deseq2.results_filtered.tsv
+    └── processed_abundance/
+        └── all.normalised_counts.tsv
+```
 
