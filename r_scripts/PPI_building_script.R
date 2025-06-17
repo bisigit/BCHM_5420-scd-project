@@ -76,6 +76,7 @@ write.csv(ppi_for_cytoscape, "ppi_for_cytoscape.csv", row.names = FALSE, quote =
 # 10. Create node table for Cytoscape
 node_table <- mapped_genes[, c("SYMBOL", "log2FoldChange", "pvalue", "padj")]
 
+
 # Remove duplicate rows (just in case)
 node_table <- node_table[!duplicated(node_table$SYMBOL), ]
 
@@ -87,4 +88,3 @@ node_table$SYMBOL <- trimws(node_table$SYMBOL)
 
 # Save again
 write.csv(node_table, "cytoscape_node_attributes_clean.csv", row.names = FALSE, quote = FALSE)
-
